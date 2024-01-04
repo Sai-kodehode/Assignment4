@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Apply flexbox with flex-direction:row to the ul */
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+/* Apply ‘padding: 10px 20px’ and ‘border:1px solid black’ to each li inside of the ul */
+li {
+  padding: 10px 20px;
+  border: 1px solid black;
+}
+
+/* Hovering over a list item applies ‘border: 1px solid red’ */
+li:hover {
+  border: 1px solid red;
+}
+
+/* The active list item changes font to “Lucida Sans” */
+li:active {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* The text color of odd list items is Grey */
+li:nth-child(odd) {
+  color: grey;
+}
+
+/* Place “>>” before each list item */
+li::before {
+  content: ">>";
+}
+
+/* When the viewport is under 700px, change the flex-direction of the ul to column */
+@media (max-width: 700px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+/* The focused list item has a background color of green (By default, list items can’t be focused, you’ll have to find out how to make them focusable) */
+ul > li:focus {
+  background-color: green;
+  outline: none;
+}
