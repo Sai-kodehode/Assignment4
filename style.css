@@ -7,6 +7,7 @@
 ul {
   list-style-type: none;
   display: flex;
+  justify-content: center;
 }
 
 /* Apply ‘padding: 10px 20px’ and ‘border:1px solid black’ to each li inside of the ul */
@@ -37,14 +38,14 @@ li::before {
 }
 
 /* When the viewport is under 700px, change the flex-direction of the ul to column */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   ul {
     flex-direction: column;
   }
 }
 
 /* The focused list item has a background color of green (By default, list items can’t be focused, you’ll have to find out how to make them focusable) */
-ul > li:focus {
+li:focus {
   background-color: green;
   outline: none;
 }
